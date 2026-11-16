@@ -1,6 +1,7 @@
-.\$title {
+.mef .\$title {
   position: relative;
-  padding-block: 24px;
+  padding-top: 60px;
+  padding-bottom: 36px;
   overflow-y: clip;
 
   img {
@@ -18,7 +19,6 @@
     object-fit: cover;
     object-position: center;
 
-    filter: blur(3px);
     scale: 1.1;
 
     overflow-y: hidden;
@@ -38,7 +38,7 @@
 
   .title-content {
     border: 1px solid white;
-    padding: 12px;
+    padding-inline: 12px;
     margin-inline: 10%;
   }
 
