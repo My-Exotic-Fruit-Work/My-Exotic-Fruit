@@ -1,16 +1,15 @@
 ### TODO
-- Figure out why style doesn't load for some people (maybe fixed)
-- Maybe better sorting in categories? manual perhaps
-- Searching for product by month/continent/country
-- Nicer way to display all categories
-- Cut down category count?
+- Maybe better sorting of products in categories? manual perhaps
+- Searching for products by month/continent/country
+- Feedback on how all categories are displayed in shop online
+- Cut down category count? Currently 30
 - Make the following pages:
   - Japanese Fruits
   - Finish Working with Brands
   - About us
     - Replace lorem ipsum
     - Still missing people on meet the team:
-      - les (never touch another mans rhubarb)
+      - les
       - colin,
       - sharon,
       - eren,
@@ -28,6 +27,7 @@
   - Decide on footer tabs
   - Make payment work on site
   - Negotiate cost of higher tier
+  - Figure out why style doesn't load for Colin (maybe fixed)
 
 ### Build Pipeline
 - applyPost and clean arent documented
