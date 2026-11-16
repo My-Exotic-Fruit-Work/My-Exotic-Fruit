@@ -25,7 +25,6 @@
 
   input,
   textarea,
-  #contact-form-submit,
   .g-recaptcha {
     max-width: 100%;
     width: calc(100% - 10px);
