@@ -113,7 +113,6 @@ body {
     font-family: "Figtree", sans-serif;
     font-weight: 700;
     line-height: 1;
-    text-transform: capitalize;
   }
 
   h2 {
@@ -123,7 +122,6 @@ body {
     font-size: clamp(28px, 3vw, 32px);
     font-family: "Cormorant Garamond", serif;
     font-weight: 300;
-    text-transform: capitalize;
   }
 
   h3 {
