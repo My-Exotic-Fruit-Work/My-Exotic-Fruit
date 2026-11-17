@@ -1,16 +1,19 @@
+/* todo: MOBILE!!! */
 .\$story {
-  img {
-    width: var(--story-width);
-    margin-bottom: calc(-1 * var(--story-margin));
+  display: var(--flex);
+  flex-wrap: wrap;
+
+  >div {
+    flex: 0 0 50%;
+    max-width: 50%;
+    box-sizing: border-box;
   }
 
-  .left {
-    margin-left: var(--story-margin-left);
+  >:nth-child(even) {
+    margin-top: 15%;
+    margin-bottom: -15%;
   }
-
-  .right {
-    margin-left: var(--story-margin-right)
-  }
-
-  margin-bottom: var(--story-margin);
+  
+  /* todo: this should only be on the last child if an even amount of children */
+  margin-bottom: 15%;
 }
