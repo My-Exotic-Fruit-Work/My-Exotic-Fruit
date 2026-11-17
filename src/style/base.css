@@ -99,7 +99,7 @@ body {
 
     --promo-icon-z: inherit;
 
-    --story-margin: calc(var(--story-width) * 0.45);
+    --story-margin: calc(var(--story-width) * 0.5);
     --story-width: 45%;
     --story-margin-left: calc(25% - (var(--story-width)*0.5));
     --story-margin-right: calc(75% - (var(--story-width)*0.5));
