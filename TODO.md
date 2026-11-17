@@ -3,6 +3,7 @@
 - Searching for products by month/continent/country
 - Feedback on how all categories are displayed in shop online
 - Cut down category count? Currently 30
+- Remove redundent capital letters
 - Make the following pages:
   - Japanese Fruits
   - About us
