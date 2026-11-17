@@ -1,0 +1,16 @@
+.\$story {
+  img {
+    width: var(--story-width);
+    margin-bottom: calc(-1 * var(--story-margin));
+  }
+
+  .left {
+    margin-left: var(--story-margin-left);
+  }
+
+  .right {
+    margin-left: var(--story-margin-right)
+  }
+
+  margin-bottom: var(--story-margin);
+}

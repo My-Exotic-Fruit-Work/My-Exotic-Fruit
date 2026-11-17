@@ -75,6 +75,11 @@ body {
   --split-top: 1px solid var(--grey-tint);
   --split-padding: 16px;
 
+  --story-margin: 0;
+  --story-width: 85%;
+  --story-margin-left: 0;
+  --story-margin-right: calc(100% - var(--story-width));
+
   --promo-icon-z: -2;
 
   @media (min-width: 1300px) {
@@ -93,6 +98,11 @@ body {
     --split-padding: 0;
 
     --promo-icon-z: inherit;
+
+    --story-margin: calc(var(--story-width) * 0.45);
+    --story-width: 45%;
+    --story-margin-left: calc(25% - (var(--story-width)*0.5));
+    --story-margin-right: calc(75% - (var(--story-width)*0.5));
   }
 
   margin: auto;
