@@ -2,6 +2,7 @@
   margin: 1%;
   align-items: stretch;
   display: var(--flex);
+  gap: 32px;
 
   >div {
     position: relative;

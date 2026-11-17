@@ -12,6 +12,10 @@
       - sharon,
       - eren,
       - rosemary
+    - Missing quotes from:
+      - luke
+      - colin
+    - Make the "get to know us" section look nicer, maybe just 1 image
   - Trade buyers
   - Guest amenity
   - Seasonal products page?

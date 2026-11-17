@@ -62,7 +62,7 @@ body {
 
   --split-width: 98%;
 
-  --flex: block;
+  --flex: grid;
   --grid: block;
 
   --title-padding: 32px;
@@ -76,7 +76,7 @@ body {
   --split-padding: 16px;
 
   --story-margin: 0;
-  --story-width: 85%;
+  --story-width: 95%;
   --story-margin-left: 0;
   --story-margin-right: calc(100% - var(--story-width));
 

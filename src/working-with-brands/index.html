@@ -343,7 +343,7 @@ $end-head^
     </div>
   </section>
 
-  <section>
+  <section class="$contact-form">
     <h2>Contact us</h2>
     <p>
       <a href="mailto:info@myexoticfruit.com" target="_blank">info@myexoticfruit.com</a>
@@ -357,7 +357,7 @@ $end-head^
     </p>
 
     <!-- contact form from ekm themselves, how kind! -->
-    <form action="index.asp?function=FORMMAIL" method="POST" class="$contact-form contact-form">
+    <form action="index.asp?function=FORMMAIL" method="POST" class="contact-form">
 
       <div class="contact-form-row">
         <label for="name">Name: <span class="star">*</span></label><input name="Name" type="text" value=""
@@ -387,3 +387,63 @@ $end-head^
     </form>
   </section>
 </div>
+
+
+$end-body^
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- very silly script, copies the result of captcha into the form when submitted -->
+<script>
+  (() => {
+    const RESPONSE_NAME = "g-recaptcha-response";
+    let form;
+    let hiddenInput;
+
+    function initialise() {
+      const blocker = document.querySelector("style-blocker");
+
+      form = blocker?.shadowRoot?.querySelector("form.contact-form");
+
+      if (!form) return false;
+
+      // Create the input inside the actual form.
+      hiddenInput = form.querySelector(
+        `input[type="hidden"][name="${RESPONSE_NAME}"]`
+      );
+
+      if (!hiddenInput) {
+        hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = RESPONSE_NAME;
+        form.appendChild(hiddenInput);
+      }
+
+      function syncCaptchaToken() {
+        const response = document.querySelector(
+          `textarea[name="${RESPONSE_NAME}"]`
+        );
+
+        if (response && hiddenInput.value !== response.value) {
+          hiddenInput.value = response.value;
+        }
+      }
+
+      form.addEventListener("submit", syncCaptchaToken, true);
+
+      syncCaptchaToken();
+      setInterval(syncCaptchaToken, 200);
+
+      console.log("EKM CAPTCHA integration initialised.");
+      return true;
+    }
+
+    if (!initialise()) {
+      const initTimer = setInterval(() => {
+        if (initialise()) {
+          clearInterval(initTimer);
+        }
+      }, 250);
+    }
+  })();
+</script>

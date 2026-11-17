@@ -1,4 +1,7 @@
 .\$contact-form {
+  max-width: 90%;
+  margin-inline: auto;
+
   .star {
     color: red;
   }
@@ -24,8 +27,7 @@
   }
 
   input,
-  textarea,
-  .g-recaptcha {
+  textarea {
     max-width: 100%;
     width: calc(100% - 10px);
     padding-left: 10px;

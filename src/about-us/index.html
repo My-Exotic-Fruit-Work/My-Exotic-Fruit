@@ -156,6 +156,7 @@ $end-head^
     </div>
     <div class="hero-block $instagram">
       <!-- Elfsight Instagram Feed | My Exotic Fruit Instagram Feed Copy -->
+       <!-- todo: this way of marking widgets is ugly, sigh -->
       <!-- !WIDGET! -->
       <div class="elfsight-app-81a76b21-490e-4720-9007-56ce6007b124" data-elfsight-app-lazy></div>
     </div>
@@ -210,7 +211,7 @@ $end-head^
         </details>
       </div>
     </div>
-    <div>
+    <div class="$contact-form">
       <h2 id="contact-us">Contact us</h2>
       <p class="centered">
         <a href="mailto:info@myexoticfruit.com" target="_blank">info@myexoticfruit.com</a>
@@ -224,7 +225,7 @@ $end-head^
       </p>
 
       <!-- contact form from ekm themselves, how kind! -->
-      <form action="index.asp?function=FORMMAIL" method="POST" class="$contact-form contact-form">
+      <form action="index.asp?function=FORMMAIL" method="POST" class="contact-form">
 
         <div class="contact-form-row">
           <label for="name">Name: <span class="star">*</span></label><input name="Name" type="text" value=""

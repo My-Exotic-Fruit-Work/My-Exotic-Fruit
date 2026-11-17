@@ -1,6 +1,7 @@
   .\$blocks {
     margin-block: 16px;
     display: var(--flex);
+    gap: 16px;
     align-items: center;
     justify-content: space-around;
 
