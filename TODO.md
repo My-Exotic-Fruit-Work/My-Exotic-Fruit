@@ -5,7 +5,6 @@
 - Cut down category count? Currently 30
 - Remove redundent capital letters
 - Make the following pages:
-  - Japanese Fruits
   - About us
     - Still missing people on meet the team:
       - les
