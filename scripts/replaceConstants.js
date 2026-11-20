@@ -3,6 +3,7 @@ const CONSTANTS = {
   "$EKM-BLOG-LINK^": "https://my-exotic-fruit.28.ekm.shop/blogs",
   "$EKM-OUR-STORY-LINK^": "https://my-exotic-fruit.28.ekm.shop/blogs/the-my-exotic-fruit-blog",
   "$EKM-CONTACT-US-LINK^": "https://my-exotic-fruit.28.ekm.shop/about-us-31-w.asp#contact-us",
+  "$EKM-ABOUT-US-LINK^": "https://my-exotic-fruit.28.ekm.shop/about-us-31-w.asp",
   "$EKM-WORKING-WITH-BRANDS-LINK^": "https://my-exotic-fruit.28.ekm.shop/working-with-brands-28-w.asp",
 
   "$CROWN-MELON-PRODUCT^": "https://my-exotic-fruit.28.ekm.shop/melon---crown-melon-luxury-fruit-for-gifting-13963-p.asp",
