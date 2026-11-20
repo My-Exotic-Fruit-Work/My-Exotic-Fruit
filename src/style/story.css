@@ -11,9 +11,9 @@
 
   >:nth-child(even) {
     margin-top: 15%;
-    margin-bottom: -15%;
+
+    &:not(:last-child) {
+      margin-bottom: -15%;
+    }
   }
-  
-  /* todo: this should only be on the last child if an even amount of children */
-  margin-bottom: 15%;
 }

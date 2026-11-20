@@ -24,11 +24,11 @@
     }
 
     .icon {
-      max-width: var(--split-width);
+      max-width: calc(var(--split-width) - 32px);
       object-fit: contain;
 
       position: absolute;
-      right: 0;
+      right: 16px;
       top: 50%;
       transform: translateY(-50%);
 

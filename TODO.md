@@ -7,7 +7,6 @@
 - Make the following pages:
   - Japanese Fruits
   - About us
-    - Replace lorem ipsum
     - Still missing people on meet the team:
       - les
       - sharon,
@@ -16,7 +15,6 @@
     - Missing quotes from:
       - luke
       - colin
-    - Make the "get to know us" section look nicer, maybe just 1 image
   - Trade buyers
   - Guest amenity
   - Seasonal products page?
