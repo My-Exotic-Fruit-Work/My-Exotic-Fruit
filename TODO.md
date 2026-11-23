@@ -1,8 +1,30 @@
 ### TODO
 - Maybe better sorting of products in categories? manual perhaps
 - Searching for products by month/continent/country
-- Feedback on how all categories are displayed in shop online
-- Cut down category count? Currently 30
+- Delisting products:
+  - Juices
+  - Yams
+  - Look into other low selling products.
+- Figure out a cleaner way to display categories (take inspiration, perhaps from currys)
+- Rework categories
+  - Merge apples/pears
+  - Lose:
+    - Chillis & Peppers
+    - Grapes
+    - Juices
+  - Change:
+    - Flavours & aromatics to ingredients
+    - Potatoes & yams to potatoes
+    - Alkaline to Alkaline & seeded
+    - Organic to Organic & unwaxed
+  - Split selection boxes and variety boxes
+  - New broader categories: 
+    - Asian
+    - Caribbean
+    - "Healthy" (good for losing weight, skin care, cures depression, etc.)
+  - Reorder categories:
+    - 1st row: Selection boxes, Variety boxes, Gifts, Luxury, Favourites, Seasonal
+    - 2nd row: Sweet, Sour, Alkaline & seeded, other broad types...
 - Remove redundent capital letters
 - Make the following pages:
   - About us
@@ -15,19 +37,60 @@
       - luke
       - colin
   - Trade buyers
+    - Book a sales call button
+    - Ask AI "we are a specialist fruit company offering B2B services, tell us what we should put on a page intended for our business buyers"
+    - Trade accounts
+      - Discounts
+      - Minimum spend of 250
+    - Button to create trade account
+    - Huge quantities of single items are ideal
+    - Advertise companies we sell for (a LOT)
+      - This means asking nicely if we are allowed to say so
+      - List can be found at [link for self](<../../Documents/new website/buyers.txt>)
+    - Get customer testemonials
   - Guest amenity
   - Seasonal products page?
+- Home page changes:
+  - Strongly encourage shopping in person
+    - Advertise picking up at the warehouse too
+  - Rotate 3 header boxes per season
+    - Keep "gifts" as one of the 3 header boxes
+  - "Interested in corporate gifting"
+    - Advertising our work for the king
+  - Amazing gifts section:
+    - Swap position with selection boxes
+    - Rename to "Luxury gifts"
+    - Change it to show the gifts section
+- Category page changes:
+  - Really celebrate each category:
+    - 2 promos minimum
+    - "Jacks pick of the week" in banner
+    - Meaning we need new banner backgrounds
+    - Instagram videos in categories
+    - Recipes in categories
+    - Anything trendy
+  - Sales fire at bottom of pages for recommending products
+- Decorate depending on season
+  - General page decoration eg. tinsel for christmas, bats for halloween
 - Chores:
   - Update products:
     - New pictures with transparent backgrounds...
-    - Give each product USPs
+    - Give each product USPs (delegate to Colin for insight)
     - Make product summaries shorter (~100 chars)
-  - Pick 2 promos for every category
+- External:
+  - Invoice script:
+    - Track when whats bought
+    - Fix it recaching products without removing the old cache
+  - Product advertising:
+    - Check most clicked products
+    - Keep up to date on trending products
+    - Advertising health benefits, eg. kissabel apples for skin
 - Finishing touches:
   - Decide on footer tabs
   - Make payment work on site
   - Negotiate cost of higher tier
   - Figure out why style doesn't load for Colin (maybe fixed)
+  - Button at checkout asking if they're happy with substitutions
 
 ### Build Pipeline
 - applyPost and clean arent documented
