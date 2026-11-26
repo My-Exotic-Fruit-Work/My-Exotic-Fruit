@@ -66,7 +66,7 @@ flowchart TB
             Organic["Organic & unwaxed"]
             Antioxidant-rich
             Superfruits
-            Healthy side-effects
+            Healthy-side-effects["Healthy side-effects"]
             Soursop
         end
     end
