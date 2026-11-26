@@ -13,55 +13,57 @@ flowchart TB
 
         subgraph Flavours
             direction TB
-            Bitter
-            Ingredients
-            Savoury
             Sweet
             Sour
+            Savoury
+            Bitter
+            Ingredients
         end
 
         subgraph Popular["Popular Now"]
             direction TB
-            Asian["Asian favourites"]
-            Caribbean["Caribbean favourites"]
             Favourites
-            Seasonal
-            Soursop
             SelectionBoxes["Selection boxes"]
             VarietyBoxes["Variety boxes"]
+            Asian["Asian favourites"]
+            Caribbean["Caribbean favourites"]
+            Seasonal
+            Soursop
         end
 
         subgraph Special["Special Produce"]
             direction TB
-            Miscellaneous
-            UniqueFruits["Unique fruits"]
-            Gifts
             Luxury["Luxury fruits"]
+            Gifts
+            Unique["Unique fruits"]
+            Miscellaneous
         end
 
         subgraph Varieties
             direction TB
-            Apples["Apples & pears"]
-            Bananas
-            Citrus
             Mangoes
-            Melons
-            Potatoes
-            Coconuts
-            Dates
             DragonFruits["Dragon fruits"]
-            Durians["Durians & jackfruits"]
-            Passion["Passion fruits"]
+            Passion-Fruits["Passion fruits"]
+            Citrus
             Guavas
-            Grapes
+            Dates
+            Bananas
             Pineapples
+            Melons
+            Coconuts
+            Apples-pears["Apples & pears"]
+            Potatoes
+            Grapes
+            Durians["Durians & jackfruits"]
+            Soursop
         end
 
         subgraph Wholesome
             direction TB
-            Alkaline["Alkaline fruits"]
-            Healthy
-            Organic["Organic & seeded"]
+            Alkaline["Alkaline & seeded"]
+            Organic["Organic & unwaxed"]
+            Superfruits
+            Soursop
         end
     end
 ```

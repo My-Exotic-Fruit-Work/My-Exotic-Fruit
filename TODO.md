@@ -1,22 +1,8 @@
 ### TODO
 - Maybe better sorting of products in categories? manual perhaps
 - Searching for products by month/continent/country
-- Delisting products:
-  - Juices
-  - Yams
-  - Look into other low selling products.
 - Figure out a cleaner way to display categories (take inspiration, perhaps from currys)
-- Rework categories
-  - Merge apples/pears
-  - Lose:
-    - Chillis & Peppers
-    - Grapes
-    - Juices
-  - Change:
-    - Flavours & aromatics to ingredients
-    - Potatoes & yams to potatoes
-    - Alkaline to Alkaline & seeded
-    - Organic to Organic & unwaxed
+- Resort products into categories
   - Split selection boxes and variety boxes
   - New broader categories: 
     - Asian
@@ -69,10 +55,16 @@
   - Sales fire at bottom of pages for recommending products
 - Decorate depending on season
   - General page decoration eg. tinsel for christmas, bats for halloween
-- Chores:
-  - Update products:
-    - New pictures with transparent backgrounds...
+- Finishing touches:
+  - Decide on footer tabs
+  - Make payment work on site
+  - Negotiate cost of higher tier
+  - Figure out why style doesn't load for Colin (maybe fixed)
+  - Button at checkout asking if they're happy with substitutions
+  - Fixing products:
+    - Re-sort products into categories
     - Give each product USPs (delegate to Colin for insight)
+    - New pictures with transparent backgrounds...
     - Make product summaries shorter (~100 chars)
 - External:
   - Invoice script:
@@ -82,12 +74,6 @@
     - Check most clicked products
     - Keep up to date on trending products
     - Advertising health benefits, eg. kissabel apples for skin
-- Finishing touches:
-  - Decide on footer tabs
-  - Make payment work on site
-  - Negotiate cost of higher tier
-  - Figure out why style doesn't load for Colin (maybe fixed)
-  - Button at checkout asking if they're happy with substitutions
 
 ### Build Pipeline
 - applyPost and clean arent documented
