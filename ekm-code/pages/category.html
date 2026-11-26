@@ -101,41 +101,44 @@
   image_height="auto";
 
   output_start="
-  <section class="mid-category-wrapper xxl-padding-top-m xxl-padding-top-d container">
-    <h2 class="flex-display flex-justify-left section-title l-padding-right l-margin-btm-m l-margin-btm-d">
-      <span>
+  <div class="category-description">
+    <div class="category-description-wrapper container">
+      <h1 class="category-title">
         [name]
-      </span>
-    </h2>
+      </h1>
 
-    <div class="category-splider-[id] splide">
-      <div class="splide__track">
-        <ul class="splide__list mid-category-container">
-          <li class="hide-errors">";
-            output_row_start="";
-            output_column_start="";
-            output_item="
-          </li>
-          <li class="visible splide__slide hp-category-[nested_counter] hp-category">
-            <div class="hp-category-img-[nested_counter] hp-category-img">
-              <!-- todo: change to [nested_image] -->
-              <img itemprop="image"
-                src="https://files.ekmcdn.com/b940b1/images/selection-boxes-158-c.webp?w=500&h=500&v=29102026-155150"
-                alt="">
-            </div>
+      <!-- todo: probably a good idea, but looks bad.
+      <div class="category-promo-box">
+        [description]
+      </div>
+      -->
 
-            <div class="body-text dark-text center-text s-margin-top-d s-margin-top-m">
-              [nested_name]
-            </div>
-          </li>
-          <li class="hide-errors">";
-            output_column_end="";
-            output_row_end="";
-            output_end="</li>
-        </ul>
+      <div class="category-splider-[id] splide">
+        <div class="splide__track">
+          <ul class="splide__list mid-category-container">
+            <li class="hide-errors">";
+              output_row_start="";
+              output_column_start="";
+              output_item="
+            </li>
+            <li class="visible splide__slide hp-category-[nested_counter] hp-category">
+              <div class="hp-category-img-[nested_counter] hp-category-img">
+                [nested_image]
+              </div>
+
+              <div class="body-text dark-text center-text s-margin-top-d s-margin-top-m">
+                [nested_name]
+              </div>
+            </li>
+            <li class="hide-errors">";
+              output_column_end="";
+              output_row_end="";
+              output_end="</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Initialises the category promo slider
@@ -159,6 +162,78 @@
   show_hover_thumbnail='yes';
   hover_thumbnail_fade='no';
   [/ekm:showdata]
+
+  <!-- todo: ekm_if these category displays. -->
+  <section class="mid-category-wrapper xxl-padding-top-m xxl-padding-top-d container">
+    <div class="category-splider splide">
+      <div class="splide__track">
+        <ul class="splide__list mid-category-container">
+          [ekm:showdata]
+
+          data='categories';
+          location='auto';
+
+          cols='1';
+          rows='100';
+          counterreset='';
+          page_navigation='no';
+
+          orderby='auto';
+          skiprecords='0';
+          excludelist='';
+          includelist='';
+
+          editbuttons='YES';
+
+          image_ratio='500';
+          image_width='auto';
+          image_height='auto';
+
+          font_formatting='no';
+
+          output_start='<li class="hide-errors">';
+            output_row_start='';
+            output_column_start='';
+            output_item='
+          </li>
+          <li class="visible splide__slide hp-category-[counter] hp-category">
+            <div class="hp-category-img-[counter] hp-category-img">
+              [image]
+            </div>
+
+            <div class="body-text dark-text center-text s-margin-top-d s-margin-top-m">
+              [name]
+            </div>
+          </li>
+          <li class="hide-errors">';
+            output_column_end='';
+            output_row_end='';
+            output_end='</li>';
+
+          output_column_blank='';
+
+          [/ekm:showdata]
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialises the category promo slider
+      new Splide('.category-splider', {
+        type: 'loop',
+        perPage: 6,
+        gap: 20,
+        pagination: false,
+        breakpoints: {
+          768: {
+            perPage: 3,
+          }
+        },
+      }).mount();
+    });
+  </script>
 
   <section class="filter-section-m l-margin-top-m container">
     <div class="flex-grid flex-justify-center filter-sortby-wrapper-m">

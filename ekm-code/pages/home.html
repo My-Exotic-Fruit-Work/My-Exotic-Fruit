@@ -180,18 +180,11 @@
   </section>
 
   <section class="mid-category-wrapper container xxl-padding-top-d xxl-padding-top-m">
-    [ekm:element]
-    show='yes';
-    allowed_types='text';
-    element_reference='hp-category-title';
-    edit_button='YES';
-    output_start='<h2
-      class="flex-display flex-justify-left section-title l-padding-right l-margin-btm-m l-margin-btm-d"><span>';
-        output_end='</span></h2>
-    ';
-    element_name_default='HP Category Title';
-    output_default='Popular Categories';
-    [/ekm:element]
+    <h2 class="flex-display flex-justify-left section-title l-padding-right l-margin-btm-m l-margin-btm-d">
+      <span>
+        Popular categories
+      </span>
+    </h2>
 
     <div class="category-splider splide">
       <div class="splide__track">
@@ -199,7 +192,7 @@
           [ekm:showdata]
 
           data='categories';
-          location='137';
+          location='171';
 
           cols='1';
           rows='100';

@@ -1,8 +1,7 @@
 ### TODO
 - Maybe better sorting of products in categories? manual perhaps
 - Searching for products by month/continent/country
-- Figure out a cleaner way to display categories (take inspiration, perhaps from currys)
-- Resort products into categories
+- Re-sort products into categories
   - Split selection boxes and variety boxes
   - New broader categories: 
     - Asian
