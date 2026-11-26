@@ -78,6 +78,11 @@
     });
   </script>
 
+  [ekm:if]
+  iftype='EQUALS';
+  ifvalue='[ekm:categoryid][/ekm:categoryid]';
+  ifvalue2='137';
+  ifthen='
   [ekm:showdata]
   data='categories';
   location='auto';
@@ -162,9 +167,19 @@
   show_hover_thumbnail='yes';
   hover_thumbnail_fade='no';
   [/ekm:showdata]
+  ';
 
-  <!-- todo: ekm_if these category displays. -->
+  ifelse='
+  [ekm:nested_if]
+  iftype="HAS_SUB_CATEGORIES";
+  ifvalue="[ekm:categoryid][/ekm:categoryid]";
+  ifthen="
   <section class="mid-category-wrapper xxl-padding-top-m xxl-padding-top-d container">
+    <h2 class="flex-display flex-justify-left section-title l-padding-right l-margin-btm-m l-margin-btm-d">
+      <span>
+        Subcategories
+      </span>
+    </h2>
     <div class="category-splider splide">
       <div class="splide__track">
         <ul class="splide__list mid-category-container">
@@ -234,6 +249,11 @@
       }).mount();
     });
   </script>
+  ";
+  ifelse="";
+  [/ekm:nested_if]
+  ';
+  [/ekm:if]
 
   <section class="filter-section-m l-margin-top-m container">
     <div class="flex-grid flex-justify-center filter-sortby-wrapper-m">
