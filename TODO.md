@@ -1,16 +1,8 @@
-### TODO
+# TODO
 - Maybe better sorting of products in categories? manual perhaps
 - Searching for products by month/continent/country
 - Re-sort products into categories
-  - Split selection boxes and variety boxes
-  - New broader categories: 
-    - Asian
-    - Caribbean
-    - "Healthy" (good for losing weight, skin care, cures depression, etc.)
-  - Reorder categories:
-    - 1st row: Selection boxes, Variety boxes, Gifts, Luxury, Favourites, Seasonal
-    - 2nd row: Sweet, Sour, Alkaline & seeded, other broad types...
-- Remove redundent capital letters
+  - Ensure products are shown in parent categories
 - Make the following pages:
   - About us
     - Still missing people on meet the team:
@@ -73,12 +65,3 @@
     - Check most clicked products
     - Keep up to date on trending products
     - Advertising health benefits, eg. kissabel apples for skin
-
-### Build Pipeline
-- applyPost and clean arent documented
-- createFiles isnt documented (or even used)
-- Finish build-embed
-  - External css is required for loading fonts.
-  - It isnt mentioned yet in the readme
-  - Entire site embed in a frame, like iframe, but not scrolling separately
-  - Make build embed not require external requests to style sheets/images
