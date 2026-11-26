@@ -79,52 +79,86 @@
   </script>
 
   [ekm:showdata]
-  tag_hide_toggle='yes';
   data='categories';
   location='auto';
-  cols='1';
-  rows='96';
-  page_navigation='yes';
   orderby='auto';
-  editbuttons='YES';
-  image_ratio='550';
-  image_width='auto';
-  image_height='auto';
-  font_formatting='no';
-  ' Output Format
-  header_title_text='';
-  output_start='
-  <section class="sub-categories ekm-section-category-categories container xl-margin-top-m xl-margin-top-d">
-    <ul class="flex-grid flex-wrap-wrap flex-justify-center ul-reset sub-categories-list">
-      <li class="hide-errors">';
-        output_row_start='';
-        output_column_start='';
-        output_item='
-      </li>
-      <li class="flex-col d-col-2 t-col-3 m-col-6 sub-category-col sub-category-item sub-category-item-[counter]">
-        {image}
-        [editbuttons]
-        <a href="[url]">
-          <div class="sub-category-image ekm-subcategory-image m-margin-btm-m m-margin-btm-d">
-            <img itemprop="image" src="[image-url]" alt="[name-NOEDIT-NOLINK]" [image-badge_attributes]>
-          </div>
-          <div class="sub-category-name">
-            <h2>[name-NOEDIT-NOLINK]</h2>
-          </div>
-        </a>
-        {/image}
-      </li>
 
-      <li class="hide-errors">';
-        output_column_end='';
-        output_row_end='';
-        output_end='</li>
-    </ul>
-  </section>';
+  output_start='<div class="hide-errors">';
+    output_item='
+  </div>
+  [ekm:nested_showdata]
+
+  data="categories";
+  location="[id]";
+
+  cols="1";
+  rows="100";
+
+  orderby="auto";
+
+  image_ratio="500";
+  image_width="auto";
+  image_height="auto";
+
+  output_start="
+  <section class="mid-category-wrapper xxl-padding-top-m xxl-padding-top-d container">
+    <h2 class="flex-display flex-justify-left section-title l-padding-right l-margin-btm-m l-margin-btm-d">
+      <span>
+        [name]
+      </span>
+    </h2>
+
+    <div class="category-splider-[id] splide">
+      <div class="splide__track">
+        <ul class="splide__list mid-category-container">
+          <li class="hide-errors">";
+            output_row_start="";
+            output_column_start="";
+            output_item="
+          </li>
+          <li class="visible splide__slide hp-category-[nested_counter] hp-category">
+            <div class="hp-category-img-[nested_counter] hp-category-img">
+              <!-- todo: change to [nested_image] -->
+              <img itemprop="image"
+                src="https://files.ekmcdn.com/b940b1/images/selection-boxes-158-c.webp?w=500&h=500&v=29102026-155150"
+                alt="">
+            </div>
+
+            <div class="body-text dark-text center-text s-margin-top-d s-margin-top-m">
+              [nested_name]
+            </div>
+          </li>
+          <li class="hide-errors">";
+            output_column_end="";
+            output_row_end="";
+            output_end="</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initialises the category promo slider
+      new Splide(".category-splider-[id]", {
+        type: "loop",
+        perPage: 6,
+        gap: 20,
+        pagination: false,
+        breakpoints: {
+          768: {
+            perPage: 3,
+          }
+        },
+      }).mount();
+    });
+  </script>
+  <div class="hide-errors">";
+    [/ekm:nested_showdata]';
+    output_end='
+  </div>';
   show_hover_thumbnail='yes';
   hover_thumbnail_fade='no';
   [/ekm:showdata]
-
 
   <section class="filter-section-m l-margin-top-m container">
     <div class="flex-grid flex-justify-center filter-sortby-wrapper-m">
@@ -811,23 +845,4 @@
   show_hover_thumbnail='yes';
   hover_thumbnail_fade='no';
   [/ekm:showdata]
-
-
-  <script>
-
-    document.addEventListener('DOMContentLoaded', function () {
-      // Initialises the category promo slider
-      new Splide('.category-splider', {
-        type: 'loop',
-        perPage: 6,
-        gap: 20,
-        pagination: false,
-        breakpoints: {
-          768: {
-            perPage: 3,
-          }
-        },
-      }).mount();
-    });
-  </script>
 </article>

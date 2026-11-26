@@ -62,7 +62,9 @@ flowchart TB
             direction TB
             Alkaline["Alkaline & seeded"]
             Organic["Organic & unwaxed"]
+            Antioxidant-rich
             Superfruits
+            Healthy side-effects
             Soursop
         end
     end
