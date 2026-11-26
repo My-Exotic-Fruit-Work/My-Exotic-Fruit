@@ -1,0 +1,308 @@
+[
+  {
+    "name": "Flavours",
+    "description": "",
+    "image": "",
+    "parents": []
+  },
+  {
+    "name": "Special produce",
+    "description": "",
+    "image": "",
+    "parents": []
+  },
+  {
+    "name": "Wholesome",
+    "description": "",
+    "image": "",
+    "parents": []
+  },
+  {
+    "name": "Popular now",
+    "description": "",
+    "image": "",
+    "parents": []
+  },
+  {
+    "name": "Varieties",
+    "description": "",
+    "image": "",
+    "parents": []
+  },
+  {
+    "name": "Luxury fruits",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Special produce"
+    ]
+  },
+  {
+    "name": "Gifts",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Special produce"
+    ]
+  },
+  {
+    "name": "Unique fruits",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Special produce"
+    ]
+  },
+  {
+    "name": "Miscellaneous",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Special produce"
+    ]
+  },
+  {
+    "name": "Sweet",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Flavours"
+    ]
+  },
+  {
+    "name": "Sour",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Flavours"
+    ]
+  },
+  {
+    "name": "Savoury",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Flavours"
+    ]
+  },
+  {
+    "name": "Bitter",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Flavours"
+    ]
+  },
+  {
+    "name": "Ingredients",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Flavours"
+    ]
+  },
+  {
+    "name": "Alkaline & seeded",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Wholesome"
+    ]
+  },
+  {
+    "name": "Organic & unwaxed",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Wholesome"
+    ]
+  },
+  {
+    "name": "Superfruits",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Wholesome"
+    ]
+  },
+  {
+    "name": "Antioxidant-rich",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Wholesome"
+    ]
+  },
+  {
+    "name": "Healthy side-effects",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Wholesome"
+    ]
+  },
+  {
+    "name": "Favourites",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Popular now"
+    ]
+  },
+  {
+    "name": "Selection boxes",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Popular now",
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Variety boxes",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Popular now",
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Asian favourites",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Popular now"
+    ]
+  },
+  {
+    "name": "Caribbean favourites",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Popular now"
+    ]
+  },
+  {
+    "name": "Soursop",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Popular now",
+      "Wholesome",
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Mangoes",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Dragon fruits",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Passion fruits",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Citrus",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Guavas",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Dates",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Bananas",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Pineapples",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Melons",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Coconuts",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Apples & pears",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Potatoes",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Grapes",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  },
+  {
+    "name": "Durians & jackfruits",
+    "description": "",
+    "image": "",
+    "parents": [
+      "Varieties"
+    ]
+  }
+]
