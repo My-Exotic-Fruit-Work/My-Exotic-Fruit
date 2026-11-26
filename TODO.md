@@ -30,12 +30,9 @@
   - About us
     - Still missing people on meet the team:
       - les
-      - sharon,
-      - eren,
-      - rosemary
+      - Angela
     - Missing quotes from:
       - luke
-      - colin
   - Trade buyers
     - Book a sales call button
     - Ask AI "we are a specialist fruit company offering B2B services, tell us what we should put on a page intended for our business buyers"

@@ -1,9 +1,70 @@
 # My Exotic Fruit
 
-Currently hosted on EKM. 
+Currently hosted on EKM.
 In future, we plan to switch to being a static website with a custom build pipeline for shared components, generated content, SEO, and other reusable functionality.
 I'm not a huge fan of [EKM's dev docs](https://tags.ekm.com) but they aren't BAD by any means.
 Worse is that I don't particularly like how their custom elements look, and their tags are messy imo.
+
+```mermaid
+flowchart TB
+
+    subgraph Shop["Shop Online"]
+        direction LR
+
+        subgraph Flavours
+            direction TB
+            Bitter
+            Ingredients
+            Savoury
+            Sweet
+            Sour
+        end
+
+        subgraph Popular["Popular Now"]
+            direction TB
+            Asian["Asian favourites"]
+            Caribbean["Caribbean favourites"]
+            Favourites
+            Seasonal
+            Soursop
+            SelectionBoxes["Selection boxes"]
+            VarietyBoxes["Variety boxes"]
+        end
+
+        subgraph Special["Special Produce"]
+            direction TB
+            Miscellaneous
+            UniqueFruits["Unique fruits"]
+            Gifts
+            Luxury["Luxury fruits"]
+        end
+
+        subgraph Varieties
+            direction TB
+            Apples["Apples & pears"]
+            Bananas
+            Citrus
+            Mangoes
+            Melons
+            Potatoes
+            Coconuts
+            Dates
+            DragonFruits["Dragon fruits"]
+            Durians["Durians & jackfruits"]
+            Passion["Passion fruits"]
+            Guavas
+            Grapes
+            Pineapples
+        end
+
+        subgraph Wholesome
+            direction TB
+            Alkaline["Alkaline fruits"]
+            Healthy
+            Organic["Organic & seeded"]
+        end
+    end
+```
 
 ## Developing
 
@@ -14,6 +75,7 @@ The corresponding files are automatically compiled into `build/`. Open the match
 I've sadly grown to prefer tab's being 2 space characters, I'm sure you can figure out how to make your IDE do that.
 
 Throughout this project I define variables with $name^ so that I always match a full string.
+
 - Regex does ^name$ to match whole strings
 - I use them backwards because I think `/^\$string\^$/` looks nicer than `/^\^string\$$/`
 
@@ -38,6 +100,7 @@ Install the File Watcher extension:
 The watcher should run `node build.js <changed file>`
 
 ## Build pipeline
+
 I like static websites, but I do NOT enjoy updating headers/footers for every file,
 so I thought this would be a simple way around.
 I was informed about svelte, but I'm sure I didn't overcomplicate this too much.
@@ -61,43 +124,46 @@ I was informed about svelte, but I'm sure I didn't overcomplicate this too much.
 - Compiling each HTML file is done in stages:
 
 1. Read the file to get a file class; a file class is defined as
-  ```javascript
-  {
-      name: "name of file",
-      path: "relative path to file",
-      outputPath: "build/"+path,
-      pathCount: "how deep the file is from project dir",
-      content: "full file content",
-      head: "text before $end-head^",
-      body: "text after $end-head^"
-  }
-  ```
+
+```javascript
+{
+    name: "name of file",
+    path: "relative path to file",
+    outputPath: "build/"+path,
+    pathCount: "how deep the file is from project dir",
+    content: "full file content",
+    head: "text before $end-head^",
+    body: "text after $end-head^"
+}
+```
 
 2. The component for the script is fetched from `components/[name].html` if it exists, ditto for data in `data/[name].any`
 3. Call `fixBody#file, script, files` from all scripts. file.body is set to the return value. This should be used for:
-    - Adding a header to every file
-    - Replacing placeholder text, e.g. "company-name" with a variable
-    - Adding in huge chunks of generated code, e.g., products from a csv file
-    - Adding a footer to every file
-    - Adding JS scripts to every file
 
+   - Adding a header to every file
+   - Replacing placeholder text, e.g. "company-name" with a variable
+   - Adding in huge chunks of generated code, e.g., products from a csv file
+   - Adding a footer to every file
+   - Adding JS scripts to every file
 4. Call `applyHead#file, script, files` from all scripts. The return text is appended to file.head; This should be used for:
-    - Apply SEO tags
-    - Import style sheets
-    - Give the page an embed
-    - ETC. anything you would put in a `<head>` tag
 
+   - Apply SEO tags
+   - Import style sheets
+   - Give the page an embed
+   - ETC. anything you would put in a `<head>` tag
 5. Write the `head.html` and `headContent`, close the head tag and open the body tag, and write the edited `fileContent` to the file
-    - Non-HTML files are output as is
-    - The output goes in the "build" folder, which you can open in your browser to see live
+
+   - Non-HTML files are output as is
+   - The output goes in the "build" folder, which you can open in your browser to see live
 
 - In a full recompile we call `createFiles#files, script, fs, path` from every script. This can be used for:
-    - Create individual pages for every blog
-    - Create individual pages for every item in a shop
+  - Create individual pages for every blog
+  - Create individual pages for every item in a shop
 
 ### How to use
 
 A script can export either or both of:
+
 ```javascript
 function fixBody(file, script, files) {
     // modify the body
@@ -114,6 +180,7 @@ module.exports = {
 ```
 
 Example `header.js` script which adds a `<header>` block to every file with a picture and links to other files tagged as categories.
+
 ```javascript
 function fixBody(file, script, files) {
     /* script.component is read from "components/header.html", it contains:
@@ -165,6 +232,7 @@ module.exports = {fixBody};
 ```
 
 Where the component in `header.html` is:
+
 ```html
 <header>
     <div>
