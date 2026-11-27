@@ -18,24 +18,106 @@
   [/ekm:location]
 
   <div class="category-description">
-    <div class="category-description-wrapper container">
+    <div class="category-description-wrapper">
       <h1 class="category-title">
         [ekm:categorypagename]categorypageid='[ekm:categoryid][/ekm:categoryid]';[/ekm:categorypagename]
       </h1>
 
-
+      <!-- im sorry, this comment wont make sense when viewed in inspect element, because it refers to something compiled away.
+      I think it only makes sense for me to have a "pick of the week" for categories which do NOT have subcategories.
+      like "shop online" dont deserve a pick of the week, cause its a chump.
+      -->
       [ekm:if]
-      iftype='EQUALS';
-      ifvalue='[ekm:incategorydescription][/ekm:incategorydescription]';
-      ifvalue2='';
-      ifthen='';
-      ifelse='
-      <div class="category-promo-box">
+      iftype='HAS_SUB_CATEGORIES';
+      ifvalue='[ekm:categoryid][/ekm:categoryid]';
+      ifthen='
+      <div class="category-promo-box container">
         [ekm:incategorydescription][/ekm:incategorydescription]
-      </div>';
-      [/ekm:if]
+      </div>
+      ';
+      ifelse='
+      <div class="max-width">
+        <section class="two-promo-grid-section container l-margin-top-d l-margin-top-m">
+          <div class="promo-grid-item">
+            [ekm:nested_element]
+            show="yes";
+            allowed_types="image";
+            image_recommended_width="470";
+            image_recommended_height="300";
+            element_reference="[ekm:categoryid][/ekm:categoryid]_header-promo-image";
+            edit_button="YES";
+            output_start="<div class="promo-grid-item-image">";
+              output_end="</div>";
+            element_name_default="Promo Grid Image";
+            output_default="<img src="#" alt>";
+            [/ekm:nested_element]
 
+            <div class="promo-grid-item-content">
+
+              <div class="section-title light-text">
+                About us
+              </div>
+
+              <p>
+                [ekm:incategorydescription][/ekm:incategorydescription]
+              </p>
+            </div>
+          </div>
+
+          <div class="promo-grid-item">
+            [ekm:nested_element]
+            show="yes";
+            allowed_types="image";
+            image_recommended_width="470";
+            image_recommended_height="300";
+            element_reference="[ekm:categoryid][/ekm:categoryid]_jacks-pick-image";
+            edit_button="YES";
+            output_start="<div class="promo-grid-item-image">";
+              output_end="</div>";
+            element_name_default="Promo Grid Image";
+            output_default="<img src="#" alt>";
+            [/ekm:nested_element]
+
+            <div class="promo-grid-item-content">
+              <div class="section-title light-text">
+                Jack's pick of the week
+              </div>
+
+              <!-- 
+              my boss has not only allowed me, but RECOMMENDED 
+              i write something short for a product for each category each week.
+              truly a highlight of my life.
+              is this how chloe felt when she got her column in the daily planet in smallville?
+              -->
+              [ekm:nested_element]
+              show="yes";
+              allowed_types="text,html";
+              element_reference="[ekm:categoryid][/ekm:categoryid]_jacks-pick-text";
+              edit_button="yes";
+              output_start="<p>";
+                output_end="</p>";
+              element_name_default="Promo Grid Item Paragraph";
+              output_default="Promotional text goes here";
+              [/ekm:nested_element]
+
+              [ekm:nested_element]
+              show="yes";
+              allowed_types="text,html";
+              element_reference="[ekm:categoryid][/ekm:categoryid]_jacks-pick-link";
+              edit_button="yes";
+              output_start="<div class="btn light">";
+                output_end="</div>";
+              element_name_default="cta-btn";
+              output_default="<a href="#">View here!</a>";
+              [/ekm:nested_element]
+            </div>
+          </div>
+        </section>
+      </div>
+      ';
+      [/ekm:if]
     </div>
+
     <div class="category-banner-image-wrapper">
       [ekm:element]
       show='yes';
@@ -49,34 +131,6 @@
       [/ekm:element]
     </div>
   </div>
-
-  <script>
-    const content = document.querySelector('.content');
-    const readMoreBtn = document.querySelector('.read-more-btn');
-    let isExpanded = false;
-    function toggleReadMoreButton() {
-      // Check if content exceeds max-height of 6em
-      if (content.scrollHeight > 6 * parseFloat(getComputedStyle(content).fontSize) * 2) {
-        readMoreBtn.style.display = 'block'; // Show button if needed
-      } else {
-        readMoreBtn.style.display = 'none'; // Hide button if not needed
-      }
-    }
-    // Initial check
-    toggleReadMoreButton();
-    // Check on window resize
-    window.addEventListener('resize', toggleReadMoreButton);
-    readMoreBtn.addEventListener('click', function () {
-      if (isExpanded) {
-        content.classList.remove('expanded');
-        readMoreBtn.textContent = 'Read More';
-      } else {
-        content.classList.add('expanded');
-        readMoreBtn.textContent = 'Read Less';
-      }
-      isExpanded = !isExpanded;
-    });
-  </script>
 
   [ekm:if]
   iftype='EQUALS';
@@ -112,11 +166,9 @@
         [name]
       </h1>
 
-      <!-- todo: probably a good idea, but looks bad.
-      <div class="category-promo-box">
+      <div class="category-promo-box black-text l-margin-btm-m l-margin-btm-d">
         [description]
       </div>
-      -->
 
       <div class="category-splider-[id] splide">
         <div class="splide__track">
