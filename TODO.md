@@ -38,9 +38,9 @@
 - Category page changes:
   - Really celebrate each category:
     - 2 promos minimum
-    - Instagram videos in categories
-    - Recipes in categories
-    - Anything trendy
+      - Instagram videos in categories
+      - Recipes in categories
+      - Anything trendy
   - Sales fire at bottom of pages for recommending products
 - Decorate depending on season
   - General page decoration eg. tinsel for christmas, bats for halloween

@@ -19,10 +19,6 @@
 
   <div class="category-description">
     <div class="category-description-wrapper">
-      <h1 class="category-title">
-        [ekm:categorypagename]categorypageid='[ekm:categoryid][/ekm:categoryid]';[/ekm:categorypagename]
-      </h1>
-
       <!-- im sorry, this comment wont make sense when viewed in inspect element, because it refers to something compiled away.
       I think it only makes sense for me to have a "pick of the week" for categories which do NOT have subcategories.
       like "shop online" dont deserve a pick of the week, cause its a chump.
@@ -31,6 +27,10 @@
       iftype='HAS_SUB_CATEGORIES';
       ifvalue='[ekm:categoryid][/ekm:categoryid]';
       ifthen='
+      <h1 class="category-title">
+        [ekm:categorypagename]categorypageid='[ekm:categoryid][/ekm:categoryid]';[/ekm:categorypagename]
+      </h1>
+
       <div class="category-promo-box container">
         [ekm:incategorydescription][/ekm:incategorydescription]
       </div>
@@ -39,22 +39,15 @@
       <div class="max-width">
         <section class="two-promo-grid-section container l-margin-top-d l-margin-top-m">
           <div class="promo-grid-item">
-            [ekm:nested_element]
-            show="yes";
-            allowed_types="image";
-            image_recommended_width="470";
-            image_recommended_height="300";
-            element_reference="[ekm:categoryid][/ekm:categoryid]_header-promo-image";
-            edit_button="YES";
-            output_start="<div class="promo-grid-item-image">";
-              output_end="</div>";
-            element_name_default="Promo Grid Image";
-            output_default="<img src="#" alt>";
-            [/ekm:nested_element]
+            <div class="promo-grid-item-image">
+              <img
+                src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename][/ekm:categorypagename]/header/about-us.webp"
+                alt>
+            </div>
 
             <div class="promo-grid-item-content">
               <div class="section-title light-text">
-                About us
+                [ekm:categorypagename]categorypageid='[ekm:categoryid][/ekm:categoryid]';[/ekm:categorypagename]
               </div>
 
               <p>
@@ -64,18 +57,11 @@
           </div>
 
           <div class="promo-grid-item">
-            [ekm:nested_element]
-            show="yes";
-            allowed_types="image";
-            image_recommended_width="470";
-            image_recommended_height="300";
-            element_reference="[ekm:categoryid][/ekm:categoryid]_jacks-pick-image";
-            edit_button="YES";
-            output_start="<div class="promo-grid-item-image">";
-              output_end="</div>";
-            element_name_default="Promo Grid Image";
-            output_default="<img src="#" alt>";
-            [/ekm:nested_element]
+            <div class="promo-grid-item-image">
+              <img
+                src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename][/ekm:categorypagename]/header/pick-of-the-week.webp"
+                alt>
+            </div>
 
             <div class="promo-grid-item-content">
               <div class="section-title light-text">
@@ -647,68 +633,107 @@
         [ekm:nested_if]
         iftype="EQUALS";
         ifvalue="[counter]";
-        ifvalue2="8";
+        ifvalue2="28";
         ifthen="
       </div>
     </div>
 
     <section class="two-promo-grid-section container l-margin-top-d l-margin-top-m">
       <div class="promo-grid-item">
-        <video autoPlay muted disablepictureinpicture playsinline loop>
-          <source
-            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename]/C.mp4">
-        </video>
+        <div class="promo-grid-item-image">
+          <img
+            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename][/ekm:categorypagename]/E.webp"
+            alt>
+        </div>
 
         <div class="promo-grid-item-content">
           <div class="section-title light-text">
-            About us
+            Our favourite recipes
           </div>
 
+          [ekm:nested_element]
+          show="yes";
+          allowed_types="html";
+          element_reference="[ekm:categoryid][/ekm:categoryid]_recipe_text";
+          edit_button="yes";
+          element_name_default="Promo Grid Item Paragraph";
+          output_default="
           <p>
-            [ekm:incategorydescription][/ekm:incategorydescription]
+            We recommend kent mangoes, they can be used to make
+            <a title="Lamb and mango curry - recipe" href="https://www.bbcgoodfood.com/recipes/lamb-mango-curry"
+              target="_blank" rel="noopener" class="light-text underline">this</a>
+            hearty lamb and mango curry;
+            <a title="Mango and coconut trifles - recipe"
+              href="https://www.bbcgoodfood.com/recipes/mango-coconut-trifles" target="_blank" rel="noopener"
+              class="light-text underline">
+              these
+            </a>
+            delightful mango and coconut trifles, and
+            <a title="Mango sorbet - recipe" href="https://www.bbcgoodfood.com/recipes/mango-sorbet" target="_blank"
+              rel="noopener" class="light-text underline">this</a>
+            heavenly mango sorbet, the perfect summer treat!
           </p>
+
+          <div class="btn light"><a>Buy kent mangoes</a></div>
+          ";
+          [/ekm:nested_element]
         </div>
       </div>
 
       <div class="promo-grid-item">
-        <video autoPlay muted disablepictureinpicture playsinline loop>
-          <source
-            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename]/D.mp4">
-        </video>
+        <div class="promo-grid-item-image">
+          <img
+            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename][/ekm:categorypagename]/F.webp"
+            alt>
+        </div>
 
         <div class="promo-grid-item-content">
-          <div class="section-title light-text">
-            Jack's pick of the week
-          </div>
-
-          <!-- 
-              my boss has not only allowed me, but RECOMMENDED 
-              i write something short for a product for each category each week.
-              truly a highlight of my life.
-              is this how chloe felt when she got her column in the daily planet in smallville?
-              -->
           [ekm:nested_element]
           show="yes";
-          allowed_types="text,html";
-          element_reference="[ekm:categoryid][/ekm:categoryid]_jacks-pick-text";
+          allowed_types="html";
+          element_reference="[ekm:categoryid][/ekm:categoryid]_footer_promo_2";
           edit_button="yes";
-          output_start="<p>";
-            output_end="</p>";
           element_name_default="Promo Grid Item Paragraph";
-          output_default="Promotional text goes here";
-          [/ekm:nested_element]
-
-          [ekm:nested_element]
-          show="yes";
-          allowed_types="text,html";
-          element_reference="[ekm:categoryid][/ekm:categoryid]_jacks-pick-link";
-          edit_button="yes";
-          output_start="<div class="btn light">";
-            output_end="</div>";
-          element_name_default="cta-btn";
-          output_default="<a href="#">View here!</a>";
+          output_default="
+          <div class="section-title light-text">
+            Title
+          </div>
+          <p>maybe link a video</p>
+          <div class="btn light"><a>Click</a></div>
+          ";
           [/ekm:nested_element]
         </div>
+      </div>
+    </section>
+
+    <div class="category-products">
+      <div
+        class="flex-grid prod-list flex-align-start flex-wrap-wrap category-prod-list l-padding-top-d l-padding-top-m">
+        ";
+        ifelse="";
+        [/ekm:nested_if]
+
+        [ekm:nested_if]
+        iftype="EQUALS";
+        ifvalue="[counter]";
+        ifvalue2="12";
+        ifthen="
+      </div>
+    </div>
+
+    <section class="two-promo-grid-section container l-margin-top-d l-margin-top-m">
+      <div class="promo-grid-item promo-grid-reel">
+        <video autoPlay muted disablepictureinpicture playsinline loop>
+          <source
+            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename][/ekm:categorypagename]/C.mp4">
+        </video>
+      </div>
+
+      <div class="promo-grid-item promo-grid-reel">
+        <video autoPlay muted disablepictureinpicture playsinline loop>
+          <source
+            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename][/ekm:categorypagename]/D.mp4">
+        </video>
       </div>
     </section>
 
@@ -735,19 +760,11 @@
     <section class="two-promo-grid-section container">
 
       <div class="promo-grid-item">
-
-        [ekm:nested_element]
-        show="yes";
-        allowed_types="image";
-        image_recommended_width="470";
-        image_recommended_height="300";
-        element_reference="[ekm:categoryid][/ekm:categoryid]_promo-grid-item-1-image";
-        edit_button="YES";
-        output_start="<div class="promo-grid-item-image">";
-          output_end="</div>";
-        element_name_default="Promo Grid Image";
-        output_default="<img src="#" alt>";
-        [/ekm:nested_element]
+        <div class="promo-grid-item-image">
+          <img
+            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename][/ekm:categorypagename]/A.webp"
+            alt>
+        </div>
 
         <div class="promo-grid-item-content">
 
@@ -788,19 +805,11 @@
       </div>
 
       <div class="promo-grid-item">
-
-        [ekm:nested_element]
-        show="yes";
-        allowed_types="image";
-        image_recommended_width="600";
-        image_recommended_height="400";
-        element_reference="[ekm:categoryid][/ekm:categoryid]_promo-grid-item-2-image";
-        edit_button="YES";
-        output_start="<div class="promo-grid-item-image">";
-          output_end="</div>";
-        element_name_default="Promo Grid Image";
-        output_default="<img src="#" alt>";
-        [/ekm:nested_element]
+        <div class="promo-grid-item-image">
+          <img
+            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename][/ekm:categorypagename]/B.webp"
+            alt>
+        </div>
 
         <div class="promo-grid-item-content">
 
