@@ -38,8 +38,6 @@
 - Category page changes:
   - Really celebrate each category:
     - 2 promos minimum
-    - "Jacks pick of the week" in banner
-    - Meaning we need new banner backgrounds
     - Instagram videos in categories
     - Recipes in categories
     - Anything trendy
@@ -57,6 +55,7 @@
     - Give each product USPs (delegate to Colin for insight)
     - New pictures with transparent backgrounds...
     - Make product summaries shorter (~100 chars)
+  - We need new category logos & backgrounds
 - External:
   - Invoice script:
     - Track when whats bought
