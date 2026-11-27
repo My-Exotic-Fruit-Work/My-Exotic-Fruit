@@ -53,7 +53,6 @@
             [/ekm:nested_element]
 
             <div class="promo-grid-item-content">
-
               <div class="section-title light-text">
                 About us
               </div>
@@ -644,6 +643,81 @@
             {/!quickview}
           </div>
         </div>
+
+        [ekm:nested_if]
+        iftype="EQUALS";
+        ifvalue="[counter]";
+        ifvalue2="8";
+        ifthen="
+      </div>
+    </div>
+
+    <section class="two-promo-grid-section container l-margin-top-d l-margin-top-m">
+      <div class="promo-grid-item">
+        <video autoPlay muted disablepictureinpicture playsinline loop>
+          <source
+            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename]/C.mp4">
+        </video>
+
+        <div class="promo-grid-item-content">
+          <div class="section-title light-text">
+            About us
+          </div>
+
+          <p>
+            [ekm:incategorydescription][/ekm:incategorydescription]
+          </p>
+        </div>
+      </div>
+
+      <div class="promo-grid-item">
+        <video autoPlay muted disablepictureinpicture playsinline loop>
+          <source
+            src="https://my-exotic-fruit.myexoticfruit.workers.dev/images/shop-online/categories/promos/[ekm:categorypagename]/D.mp4">
+        </video>
+
+        <div class="promo-grid-item-content">
+          <div class="section-title light-text">
+            Jack's pick of the week
+          </div>
+
+          <!-- 
+              my boss has not only allowed me, but RECOMMENDED 
+              i write something short for a product for each category each week.
+              truly a highlight of my life.
+              is this how chloe felt when she got her column in the daily planet in smallville?
+              -->
+          [ekm:nested_element]
+          show="yes";
+          allowed_types="text,html";
+          element_reference="[ekm:categoryid][/ekm:categoryid]_jacks-pick-text";
+          edit_button="yes";
+          output_start="<p>";
+            output_end="</p>";
+          element_name_default="Promo Grid Item Paragraph";
+          output_default="Promotional text goes here";
+          [/ekm:nested_element]
+
+          [ekm:nested_element]
+          show="yes";
+          allowed_types="text,html";
+          element_reference="[ekm:categoryid][/ekm:categoryid]_jacks-pick-link";
+          edit_button="yes";
+          output_start="<div class="btn light">";
+            output_end="</div>";
+          element_name_default="cta-btn";
+          output_default="<a href="#">View here!</a>";
+          [/ekm:nested_element]
+        </div>
+      </div>
+    </section>
+
+    <div class="category-products">
+      <div
+        class="flex-grid prod-list flex-align-start flex-wrap-wrap category-prod-list l-padding-top-d l-padding-top-m">
+        ";
+        ifelse="";
+        [/ekm:nested_if]
 
         [ekm:nested_if]
         iftype="EQUALS";
